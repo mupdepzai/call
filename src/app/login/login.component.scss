@@ -1,0 +1,71 @@
+// Định nghĩa màu sắc chính và phụ
+$primary-color: #3498db;
+$secondary-color: #2980b9;
+
+// Định nghĩa độ bo góc cho button
+$border-radius: 5px;
+
+// Định nghĩa các thuộc tính chung cho button
+$button-padding-y: 10px;
+$button-padding-x: 20px;
+$button-font-size: 16px;
+$button-font-weight: bold;
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #FFC107, #FF5722);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+
+  & > input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    transition: border-color 0.3s ease;
+  }
+
+  /* CSS cho hover */
+  & > input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+        border-color: #999;
+  }
+
+  /* CSS cho focus */
+  & > input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+      border-color: #33c3f0;
+  }
+
+  /* CSS cho placeholder */
+  & > input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder {
+      color: #999;
+  }
+
+  /* CSS cho disabled */
+  & > input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled {
+      background-color: #f9f9f9;
+      color: #666;
+      cursor: not-allowed;
+  }
+  & > .login-button {
+    display: inline-block;
+    padding: $button-padding-y $button-padding-x;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    text-align: center;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    // Màu sắc và hover
+    background-color: $primary-color;
+    color: white;
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+
+}
